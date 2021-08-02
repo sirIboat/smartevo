@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import { Form, Button, Card, Alert } from "react-bootstrap"
+import { Link, useHistory } from "react-router-dom"
 import firebase from "../firebase";
 import "firebase/auth";
 import "firebase/database";
@@ -29,6 +30,7 @@ async function selectUserByUid(response) {
 function Login({ setSerial }) {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const [error, setError] = useState("")
 
     const onSubmit = async e => {
         e.preventDefault();
@@ -46,36 +48,43 @@ function Login({ setSerial }) {
         });
     }
 
-    return (
-        <form className="{styles.form}" onSubmit={onSubmit}>
-            <h3 >Log in</h3>
+    return (<>
 
-            <div className="form-group">
-                <label>Email</label>
-                <input
-                    type="email"
-                    name="email"
-                    className="form-control"
-                    placeholder="Enter email"
-                    onChange={e => setEmail(e.target.value)}
-                />
-            </div>
+        <Card>
+            <Card.Body>
+                <form className="{styles.form}" onSubmit={onSubmit}>
+                    <h2 className="text-center mb-4">Log In</h2>
+                    <Form.Group id="email">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control
+                            type="email"
+                            name="email"
+                            className="form-control"
+                            placeholder="Enter email"
+                            onChange={e => setEmail(e.target.value)}
+                        />
+                    </Form.Group >
 
-            <div className="form-group">
-                <label>Password</label>
-                <input
-                    type="password"
-                    name="password"
-                    className="form-control"
-                    placeholder="Enter password"
-                    onChange={e => setPassword(e.target.value)}
-                />
-            </div>
+                    <Form.Group id="password">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control
+                            type="password"
+                            name="password"
+                            className="form-control"
+                            placeholder="Enter password"
+                            onChange={e => setPassword(e.target.value)}
+                        />
+                    </Form.Group>
+                    <Form.Group>
+                        <br />
+                        <Button type="submit" className="w-100" variant="success">
+                            Sign in
+                        </Button></Form.Group>
 
-            <button type="submit" className="btn btn-signin btn-lg btn-block ">
-                Sign in
-            </button>
-        </form>
+                </form>
+            </Card.Body>
+        </Card>
+    </>
     );
 }
 

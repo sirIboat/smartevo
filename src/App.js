@@ -1,10 +1,12 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
+import './App.css'
 import Login from "./components/Login/Login";
 import useSerial from "./components/Login/useSerial";
 import Home from './components/Home/Home'
+import Navbar from "./components/Navbar/Navbar";
+
 
 function App() {
   const { serial, setSerial, clearSerial } = useSerial();
@@ -12,23 +14,24 @@ function App() {
   if (!serial) {
     return (
       <div className="App">
-        <div className="outer">
-          <Login setSerial={setSerial} />
-        </div>
-      </div>
+        <Login setSerial={setSerial} />
+
+      </div >
     );
   }
 
   return (
-    <div className="App">
-      <div className="outer">
-        <BrowserRouter>
-          {/* <Navbar user={serial} clearUser={clearSerial} /> */}
-          <Switch>
+    <div className="dextop">
+
+      <BrowserRouter>
+        <Navbar user={serial} clearSerial={clearSerial} />
+        <Switch>
+          <Route>
             <Home serial={serial} clearSerial={clearSerial} />
-          </Switch>
-        </BrowserRouter >
-      </div>
+          </Route>
+        </Switch>
+      </BrowserRouter >
+
     </div>
 
   );

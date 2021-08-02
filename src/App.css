@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100;0,400;0,600;1,100;1,400;1,600&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Sarabun:ital,wght@0,100;0,400;0,600;1,100;1,400;1,600&display=swap');
+/* font-family: 'Georama', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Sarabun', sans-serif; */
+ 
+ .App{
+    display: flex;
+    background: #252525;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto; 
+    
+    justify-self: center;
+    align-items: center;
+   
+} 
+.card{
+    display: flex;
+    max-height:300px ;
+    max-width: 400px;
+    margin: auto;
+}
+
+@media screen and (min-width: 400px) {
+    
+     
+    
+  }
