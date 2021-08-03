@@ -5,7 +5,7 @@ font-family: 'Sarabun', sans-serif; */
  
  .App{
     display: flex;
-    background: #252525;
+    background: #212529;
     -webkit-background-size: cover;
     background-size: cover;
     position: fixed;
@@ -19,6 +19,14 @@ font-family: 'Sarabun', sans-serif; */
     align-items: center;
    
 } 
+.Web{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #212529;
+}
 .card{
     display: flex;
     max-height:300px ;
