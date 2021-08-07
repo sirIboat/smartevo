@@ -1,0 +1,114 @@
+.history{
+    background-color: #212529;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto; 
+    z-index: 1;
+    margin: auto;
+  
+}
+
+.datetimepicker-box{
+    border-top-right-radius: 5px;
+    border-top-left-radius:5px ;
+    border: 50px;
+    padding: 20px;
+    background-color: #fff;
+   
+   
+}
+.datetimepicker-box-start{
+    max-width: 246px;
+}
+.datetimepicker-box-end{
+    max-width: 246px;
+}
+
+.buttonHistory {
+    position: relative;
+    background-color: #3dc3d4;
+    border: none;
+    font-size: 25px;
+    color: #FFFFFF;
+    padding: 1px 10px 2px;
+    width: 150;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    top: 10px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.buttonHistory:after {
+    content: "";
+    background: #90e0ee;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.buttonHistory:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.buttonHistory-export {
+    position: relative;
+    background-color: #d4743d;
+    border: none;
+    font-size: 25px;
+    color: #FFFFFF;
+    padding: 1px 10px 2px;
+    width: 150;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    top: 10px;
+    left:10px ;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.buttonHistory-export:after {
+    content: "";
+    background: #eebd90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.buttonHistory-export:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+
+/* .centers{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+ */

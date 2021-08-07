@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100;0,400;0,600;1,100;1,400;1,600&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Sarabun:ital,wght@0,100;0,400;0,600;1,100;1,400;1,600&display=swap');
+
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-calendars/styles/material.css";
 /* font-family: 'Georama', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Sarabun', sans-serif; */
@@ -25,15 +31,17 @@ font-family: 'Sarabun', sans-serif; */
     left: 0;
     bottom: 0;
     right: 0;
-    background: #212529;
-}
+    background:#212529 ;
+}/* #212529 */
 .card{
     display: flex;
-    max-height:300px ;
-    max-width: 400px;
+    height:300px ;
+    width: 400px;
     margin: auto;
 }
-
+.test{
+    color: white;
+}
 @media screen and (min-width: 400px) {
     
      

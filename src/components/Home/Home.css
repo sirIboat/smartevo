@@ -1,7 +1,17 @@
 
-.home p{ 
-    display: block; 
-    font-size: 5rem;
-    text-align: center;
-    margin: auto;
+.home{  
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    justify-self: center;
+    align-items: center;
+    
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.datetimepicker-box-home{
+    max-width: 246px;
+    margin: 30px auto;
+   
 }

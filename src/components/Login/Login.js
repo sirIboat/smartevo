@@ -18,7 +18,6 @@ async function loginUser({ email, password }) {
       } else {
         alert(errorMessage);
       }
-      loginUser();
     });
 }
 
@@ -34,29 +33,31 @@ function Login({ setSerial }) {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const response = await loginUser({
-      email,
-      password,
-    });
-    const ref = await selectUserByUid(response.user);
-    ref.on(
-      "value",
-      (snapshot) => {
-        const data = snapshot.val();
-        console.log(data.serialnumber);
-        setSerial(data.serialnumber);
-      },
-      (errorObject) => {
-        console.log("The read failed: " + errorObject.name);
-      }
-    );
+    try {
+      const response = await loginUser({
+        email,
+        password,
+      });
+      const ref = await selectUserByUid(response.user);
+      ref.on(
+        "value",
+        (snapshot) => {
+          const data = snapshot.val();
+          //console.log(data.serialnumber);
+          setSerial(data.serialnumber);
+        },
+        (errorObject) => {
+          console.log("The read failed: " + errorObject.name);
+        }
+      );
+    } catch (error) { }
   };
 
   return (
     <>
       <Card>
         <Card.Body>
-          <form className="{styles.form}" onSubmit={onSubmit}>
+          <form className="from-login" onSubmit={onSubmit}>
             <h2 className="text-center mb-4">Log In</h2>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>

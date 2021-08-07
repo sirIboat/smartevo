@@ -5,7 +5,7 @@ function useSerial() {
     function getSerial() {
         const userString = localStorage.getItem('serialnumber');
         const user = JSON.parse(userString);
-        console.log(user);
+        // console.log(user);
         return user
     }
     const [serial, setSerial] = useState(getSerial());
